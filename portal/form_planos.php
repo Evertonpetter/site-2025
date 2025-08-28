@@ -39,12 +39,11 @@
 
             <!-- BOTÕES -->
             <button type="submit" class="btn btn-primary" name="sand" id="sand">
-                <i class="fa fa-paste" style="font-size:25px;"></i><br>
                 ✔ Enviar
             </button>
 
             <button type="reset" class="btn btn-warning" name="limpa" id="limpa">
-                <i class="fa fa-eraser" style="font-size:25px;"></i><br>
+                
                 🧹 Limpar
             </button>
         </form>

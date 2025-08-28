@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>index / Página 1</title>
+    <!---------------HEAD---------------> 
+    <?php include 'includes/head.php';?>
+    <!-- Font Awesome (para os ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!---------------HEADER---------------> 
+        <?php include 'includes/header.php';?>
+
+
+
+
+        
+  
+        <!---------------footer---------------> 
+        <?php include 'includes/footer.php';?>
+    </footer>
+</body>
+</html>

@@ -6,15 +6,16 @@
 
     <div class="d-flex flex-column align-items-end">
       <!-- Ícone e nome do usuário logado -->
-      <i class='fa fa-user-circle' style='font-size:24px'>&ensp;
-        <?php 
-        if (isset($_SESSION['nome_operador'])) {
-            echo htmlspecialchars($_SESSION['nome_operador']);
-        } else {
-            echo "Visitante";
-        }
-        ?>
-      </i>
+    <i class='fa fa-user-circle' style='font-size:24px'>&ensp;
+  <?php 
+    if (isset($_SESSION['nome_operador']) && isset($_SESSION['sobrenome_operador'])) {
+        echo htmlspecialchars($_SESSION['n_operador'] . " " . $_SESSION['sobrenome_operador']);
+    } else {
+        echo "Everton petter";
+    }
+  ?>
+</i>
+
     </div>
   </div>
 </nav>
