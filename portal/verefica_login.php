@@ -8,8 +8,8 @@
     }
 
         $USUARIO = $_SESSION['id_operador'];
-        $noperador = $_SESSION['nome_operador'];
-        $soperador = $_SESSION['sobrenome_operador'];
+        $nome_operador = $_SESSION['nome_operador'];
+        $sobrenome_operador = $_SESSION['sobrenome_operador'];
         $nivel = $_SESSION['nivel'];
 
         $mestre      = 1;
