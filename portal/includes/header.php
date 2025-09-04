@@ -1,4 +1,3 @@
-
 <nav class="navbar bg-white">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
@@ -7,15 +6,15 @@
 
     <div class="d-flex flex-column align-items-end">
       <!-- Ícone e nome do usuário logado -->
-    <i class='fa fa-user-circle' style='font-size:24px'>&ensp;
-<?php
-if (!empty($_SESSION['nome_operador']) || !empty($_SESSION['sobrenome_operador'])) {
-    echo ($_SESSION['nome_operador'] ?? '') . " " . ($_SESSION['sobrenome_operador'] ?? '');
-} else {
-    echo "erro";
-}
-?>
-</i>
+      <i class='fa fa-user-circle' style='font-size:24px'>&ensp;
+      <?php
+      if (!empty($_SESSION['nome_operador']) || !empty($_SESSION['sobrenome_operador'])) {
+          echo ($_SESSION['nome_operador'] ?? '') . " " . ($_SESSION['sobrenome_operador'] ?? '');
+      } else {
+          echo "erro";
+      }
+      ?>
+      </i>
     </div>
   </div>
 </nav>
@@ -30,71 +29,76 @@ if (!empty($_SESSION['nome_operador']) || !empty($_SESSION['sobrenome_operador']
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <!-- Sempre aparece -->
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php" id="header">
-            <i class="fa fa-home me-2"></i>inicio
+            <i class="fa fa-home me-2"></i>INÍCIO
           </a>
         </li>
 
-        <!-- Cadastro dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
-            id="header">
-            <i class="fa fa-plus me-2"></i>CADASTRO
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" style="color: black;" href="clientes.php" id="header">
-                <i class="fa fa-user me-2"></i>CLIENTE
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" style="color: black;" href="form_planos.php" id="header">
-                <i class="fa fa-folder-open me-2"></i>PLANO
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" style="color: black;" href="contato.php" id="header">
-                <i class="fa fa-headphones me-2"></i> ATENDIMENTO
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <!-- Fatura normal -->
         <li class="nav-item">
           <a class="nav-link" href="fatura.php" id="header">
             <i class="fa fa-newspaper-o me-2"></i>FATURA
           </a>
         </li>
 
-        <!-- Listar dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
-            id="header">
-            <i class="fa fa-list me-2"></i>LISTAR
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" style="color: black;" href="listar_planos.php" id="header">
-                <i class="fa fa-folder me-2"></i>PLANOS
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" style="color: black;" href="listar_clientes.php" id="header">
-                <i class="fa fa-users me-2"></i>CLIENTES
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" style="color: black;" href="listar_atendimentos.php" id="header">
-                <i class="fa fa-headphones me-2"></i>ATENDIMENTOS
-              </a>
-            </li>
-          </ul>
-        </li>
+        <!-- Só aparece se o nível for diferente de 3 -->
+        <?php if ($_SESSION['nivel'] != '3') { ?>
+          
+          <!-- Cadastro dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="header">
+              <i class="fa fa-plus me-2"></i>CADASTRO
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" style="color: black;" href="clientes.php" id="header">
+                  <i class="fa fa-user me-2"></i>CLIENTE
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" style="color: black;" href="form_planos.php" id="header">
+                  <i class="fa fa-folder-open me-2"></i>PLANO
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" style="color: black;" href="contato.php" id="header">
+                  <i class="fa fa-headphones me-2"></i>ATENDIMENTO
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Listar dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="header">
+              <i class="fa fa-list me-2"></i>LISTAR
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" style="color: black;" href="listar_planos.php" id="header">
+                  <i class="fa fa-folder me-2"></i>PLANOS
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" style="color: black;" href="listar_clientes.php" id="header">
+                  <i class="fa fa-users me-2"></i>CLIENTES
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" style="color: black;" href="listar_atendimentos.php" id="header">
+                  <i class="fa fa-headphones me-2"></i>ATENDIMENTOS
+                </a>
+              </li>
+            </ul>
+          </li>
+
+        <?php } ?>
 
       </ul>
-      <!-- Botão para logout -->
+
+      <!-- Botão para logout (sempre aparece) -->
       <a href="logout.php" class="btn btn-outline-light">SAIR</a>
     </div>
   </div>
