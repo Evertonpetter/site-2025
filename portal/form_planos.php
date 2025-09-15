@@ -33,6 +33,13 @@ if(!in_array ($nivel, $niveldapagina)) {
 
             <hr>
 
+            <?php 
+                if (isset($_SESSION['msgFormPlanos'])){
+                    echo $_SESSION ['msgFormPlanos'];
+                    unset($_SESSION['msgFormPlanos']);
+                }
+            ?>
+
             <form action="cad_plano.php" method="POST">
                 <div class="form-row">
                     <div class="col">
