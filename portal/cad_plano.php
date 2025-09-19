@@ -21,10 +21,10 @@ if (!in_array ($nivel, $niveldapagina)) {
 
     if($conexao->query($sql_code) or die($conexao->error)){
     
-        $_SESSION['msgFormPlanos']= "ok, o plano foi enviado com sucesso";
+        $_SESSION['msgFormPlanos']= "<center> <div class='alert alert-success' role='alert'>ok, o plano foi enviado com sucesso </div>  </center>";
         header('location: form_planos.php');
     }else{
-        $_SESSION['msgFormPlanos']= "ok, o plano foi enviado com sucesso";
+        $_SESSION['msgFormPlanos']= " <center> <div class='alert alert-danger' role='alert'> ok, o plano foi enviado com sucesso </div> </center>";
         header('location: form_planos.php');
     }
 
