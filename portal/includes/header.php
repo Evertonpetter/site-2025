@@ -43,17 +43,17 @@
           </a>
         </li>
 
-        <!-- Só aparece se o nível for diferente de 3 -->
+        
         <?php if ($_SESSION['nivel'] != '3') { ?>
           
-          <!-- Cadastro dropdown -->
+          
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="header">
               <i class="fa fa-plus me-2"></i>CADASTRO
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" style="color: black;" href="clientes.php" id="header">
+                <a class="dropdown-item" style="color: black;" href="form_cliente.php" id="header">
                   <i class="fa fa-user me-2"></i>CLIENTE
                 </a>
               </li>
@@ -70,7 +70,6 @@
             </ul>
           </li>
 
-          <!-- Listar dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="header">
               <i class="fa fa-list me-2"></i>LISTAR
